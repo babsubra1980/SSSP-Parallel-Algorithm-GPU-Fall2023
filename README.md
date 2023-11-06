@@ -81,3 +81,20 @@ Time complexity
   </mfenced>
   <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
 </math>
+
+# Sequential Bellman-Ford algorithm
+
+Maintain <math xmlns="http://www.w3.org/1998/Math/MathML"> for all <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+  <mo mathcolor="#3F3F3F">∈</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑉</mi>
+</math>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+  <mo mathcolor="#3F3F3F">.</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
+  <mi mathcolor="#3F3F3F"> </mi>
+</math>
+
+ shortest path weight estimate
+ ￼ records tentative shortest path weight from source vertex ￼ to vertex ￼.
+ ￼records the actual shortest path distance in the end.
