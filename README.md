@@ -25,7 +25,9 @@ Each vertex is processed one by one
 
 Sequential in itself
 
-Time complexity ￼￼￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+Time complexity
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑂</mi>
   <mfenced mathcolor="#3F3F3F" separators="|">
     <mrow>
@@ -61,4 +63,20 @@ Time complexity ￼￼￼<math xmlns="http://www.w3.org/1998/Math/MathML">
  
 All vertices are processed for  times
 
-Time complexity 
+Time complexity
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑂</mi>
+  <mo stretchy="false" mathcolor="#3F3F3F">(</mo>
+  <mfenced mathcolor="#3F3F3F" open="|" close="|" separators="|">
+    <mrow>
+      <mi mathvariant="italic" mathcolor="#3F3F3F">𝐸</mi>
+    </mrow>
+  </mfenced>
+  <mfenced mathcolor="#3F3F3F" open="|" close="|" separators="|">
+    <mrow>
+      <mi mathvariant="italic" mathcolor="#3F3F3F">𝑉</mi>
+    </mrow>
+  </mfenced>
+  <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
+</math>
