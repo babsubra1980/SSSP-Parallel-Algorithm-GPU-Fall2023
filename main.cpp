@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv) {
     if (argc < 2 ){
-        cout << "Usage : ./bellman MODE FILE BLOCK_SIZE DEBUG" << endl;
+        cout << "Usage : ./bellmanford MODE FILE BLOCK_SIZE DEBUG" << endl;
         cout << "MODE - seq / cuda \n"
                 "FILE - Input file \n"
                 "BLOCKS - Number of blocks per grid for cuda\n"
@@ -45,13 +45,6 @@ int main(int argc, char **argv) {
     }
     if(mode == "cuda"){
         runBellmanFordOnGPU(file.c_str(), BLOCK_SIZE,debug);
-    }
-    if(mode == "cuda-stride"){
-        runBellmanFordOnGPUWithGridStride(file.c_str(), BLOCKS, BLOCK_SIZE, debug);
-    }
-    if(mode == "cuda-v3") {
-        runBellmanFordOnGPUV3(file.c_str(), BLOCKS, BLOCK_SIZE, debug);
-
     }
 
 }
