@@ -84,15 +84,15 @@ Time complexity
 
 # Sequential Bellman-Ford algorithm
 
-Maintain <math xmlns="http://www.w3.org/1998/Math/MathML"> for all <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
-  <mo mathcolor="#3F3F3F">∈</mo>
-  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑉</mi>
-</math>
+Maintain <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
   <mo mathcolor="#3F3F3F">.</mo>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
   <mi mathcolor="#3F3F3F"> </mi>
+</math> for all <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+  <mo mathcolor="#3F3F3F">∈</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑉</mi>
 </math>
 
  shortest path weight estimate
