@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
         cout << "Elapsed time : " << duration.count() << " milli seconds " << endl;
     }
     if(mode == "cuda"){
-        runBellmanFordOnGPU(file.c_str(), BLOCK_SIZE,debug);
+        runBellmanFordOnGPUV3(file.c_str(), BLOCKS, BLOCK_SIZE, debug);
     }
 
 }
