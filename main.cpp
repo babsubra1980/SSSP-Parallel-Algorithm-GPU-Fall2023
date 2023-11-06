@@ -8,7 +8,7 @@ int main(int argc, char **argv) {
                 "BLOCKS - Number of blocks per grid for cuda\n"
                 "BLOCK_SIZE - Number of threads per block for cuda \n"
                 "DEBUG - 1 or 0 to enable/disable extended debug messages on console\n"
-                "Program expects these CSV files based on FILE thats passed in the argument\n"
+                "Our code expects these CSV files based on FILE thats passed in the argument\n"
                 "    FILE_V.csv\n"
                 "    FILE_I.csv\n"
                 "    FILE_E.csv\n"
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
            !isValidFile(file + "_I.csv") ||
            !isValidFile(file + "_E.csv") ||
            !isValidFile(file + "_W.csv")){
-            cout << "One or more CSR files missing" << endl;
+            cout << "One or more CSV files missing" << endl;
             return -1;
         }
 
