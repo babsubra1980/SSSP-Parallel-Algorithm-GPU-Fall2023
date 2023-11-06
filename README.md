@@ -18,3 +18,47 @@
  
 	source vertex  to all other vertices.
 	 
+
+ Dijkstra’s algorithm
+ 
+Each vertex is processed one by one
+
+Sequential in itself
+
+Time complexity ￼￼￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑂</mi>
+  <mfenced mathcolor="#3F3F3F" separators="|">
+    <mrow>
+      <mfenced mathcolor="#3F3F3F" open="|" close="|" separators="|">
+        <mrow>
+          <mi mathvariant="italic" mathcolor="#3F3F3F">𝐸</mi>
+        </mrow>
+      </mfenced>
+      <mo mathcolor="#3F3F3F">+</mo>
+      <mfenced mathcolor="#3F3F3F" open="|" close="|" separators="|">
+        <mrow>
+          <mi mathvariant="italic" mathcolor="#3F3F3F">𝑉</mi>
+        </mrow>
+      </mfenced>
+      <mrow>
+        <mrow>
+          <mi mathvariant="normal" mathcolor="#3F3F3F">log</mi>
+        </mrow>
+        <mo mathcolor="#3F3F3F">⁡</mo>
+        <mrow>
+          <mfenced mathcolor="#3F3F3F" open="|" close="|" separators="|">
+            <mrow>
+              <mi mathvariant="italic" mathcolor="#3F3F3F">𝑉</mi>
+            </mrow>
+          </mfenced>
+        </mrow>
+      </mrow>
+    </mrow>
+  </mfenced>
+</math>
+
+ The Bellman-Ford algorithm
+ 
+All vertices are processed for  times
+
+Time complexity 
