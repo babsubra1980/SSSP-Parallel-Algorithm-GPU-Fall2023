@@ -185,21 +185,7 @@ __global__ void updateDistanceWithGridStrideV3(int N, int *d_in_V, int *d_in_I, 
     }
 }
 
-// Update d_out_P when Bellman-Ford algorithm is completed (for version 1)
-__global__ void updatePred(int N, int *d_in_V, int *d_in_I, int *d_in_E, int *d_in_W, int *d_out_D, int *d_out_P) {
-    unsigned int index = threadIdx.x + (blockDim.x * blockIdx.x);
-    if (index < N) {
-        for (int j = d_in_I[index]; j < d_in_I[index+1]; ++j) {
-            int u = d_in_V[index];
-            int w = d_in_W[j];
-            int dis_u = d_out_D[index];
-            int dis_v = d_out_D[d_in_E[j]];
-            if (dis_v == dis_u + w) {
-                atomicMin(&d_out_P[d_in_E[j]], u);
-            }
-        }
-    }
-}
+
 
 // Update d_out_P when Bellman-Ford algorithm is completed (for version 2 and 3)
 __global__ void updatePredWithGridStride(int N, int *d_in_V, int *d_in_I, int *d_in_E, int *d_in_W, int *d_out_D, int *d_out_P) {
