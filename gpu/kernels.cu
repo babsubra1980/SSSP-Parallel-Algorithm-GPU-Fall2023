@@ -23,33 +23,6 @@ __global__ void relax(int N, int MAX_VAL, int *d_in_V, int *d_in_I, int *d_in_E,
     }
 }
 
-__global__ void relaxWithGridStride(int N, int MAX_VAL, int *d_in_V, int *d_in_I, int *d_in_E, int *d_in_W, int *d_out_D, int *d_out_Di){
-    unsigned int tid = threadIdx.x + (blockDim.x * blockIdx.x);
-    unsigned int stride = blockDim.x * gridDim.x;
-
-    //if(tid ==0){
-    //    printf("block dim = %d, grid dim = %d, stride = %d\n",blockDim.x,gridDim.x, stride);
-    //}
-    for (int index = tid; index < N - 1; index += stride){  // do index < N - 1 because nth element of I array points to the end of E array
-        for (int j = d_in_I[index]; j < d_in_I[index + 1]; j++) {
-            int w = d_in_W[j];
-            int du = d_out_D[index];
-            int dv = d_out_D[d_in_E[j]];
-            int newDist = du + w;
-            // Check if the distance is already set to max then just take the max since,
-            // Cuda implementation gives this when a number is added to already max value of int.
-            // E.g 2147483647 + 5 becomes -2147483644
-            if (du == MAX_VAL){
-                newDist = MAX_VAL;
-            }
-            //printf("Index = %d, w=%d, du =%d, dv=%d,  -- du + w = %d\n", index, w, du , dv, du + w);
-
-            if (newDist < dv) {
-                atomicMin(&d_out_Di[d_in_E[j]],newDist);
-            }
-        }
-    }
-}
 
 __global__ void updateDistance(int N, int *d_in_V, int *d_in_I, int *d_in_E, int *d_in_W, int *d_out_D, int *d_out_Di) {
     unsigned int index = threadIdx.x + (blockDim.x * blockIdx.x);
