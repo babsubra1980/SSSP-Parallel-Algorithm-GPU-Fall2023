@@ -1,5 +1,5 @@
-#ifndef GPU_GRAPH_ALGORITHMS_UTILITIES_H
-#define GPU_GRAPH_ALGORITHMS_UTILITIES_H
+#ifndef BELLMANFORD_GPU_UTILITIES_H
+#define BELLMANFORD_GPU_UTILITIES_H
 
 #include<vector>
 #include <fstream>
@@ -13,4 +13,5 @@ void printVector(std::vector<int> &vec);
 void storeResult(const char *filename, std::vector<int> &V, int *D, int *P);
 bool isValidFile (const std::string& filename);
 std::string makeOutputFileName(std::string inputFile);
-#endif //GPU_GRAPH_ALGORITHMS_UTILITIES_H
+#endif //BELLMANFORD_GPU_UTILITIES_H
+
