@@ -36,7 +36,6 @@ int main(int argc, char **argv) {
     int debug = argc > 5 ? atoi(argv[5]) : 0;
 
     if(mode == "seq") {
-        // Reference https://www.geeksforgeeks.org/measure-execution-time-function-cpp/
         auto start = high_resolution_clock::now();
         runBellmanFordSequential(file, debug);
         auto stop = high_resolution_clock::now();
