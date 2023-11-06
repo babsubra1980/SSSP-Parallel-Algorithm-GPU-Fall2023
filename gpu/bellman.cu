@@ -1,7 +1,7 @@
 #include "bellman.cuh"
 #include "../main.h"
 
-void printCudaDevice(){
+void printCudaDeviceDetails(){
     int dev = 0;
     cudaSetDevice(dev);
     cudaDeviceProp devProps;
@@ -38,7 +38,7 @@ int runBellmanFordOnGPUV3(const char *file, int blocks, int blockSize, int debug
     cudaEvent_t start, stop;
     cudaEventCreate(&start);
     cudaEventCreate(&stop);
-    cout << "Running Bellman Ford on GPU - Version 3 with Grid Stride Kernel + relax only when needed" << endl;
+    cout << "Running Bellman Ford on GPU" << endl;
     cudaEventRecord(start, 0);
 
     std::vector<int> V, I, E, W;
@@ -96,7 +96,7 @@ int runBellmanFordOnGPUV3(const char *file, int blocks, int blockSize, int debug
     //0, V.size()-1 - for binary search of V array with each E[i] to find index
     updateIndexOfEdgesWithGridStide<<<BLOCKS, BLOCK_SIZE>>>(E.size(), d_in_V, d_in_E, 0, V.size()-1);
 
-    // Bellman ford
+    // Bellman Ford
     for (int round = 1; round < V.size(); round++) {
         if(DEBUG){
             cout<< "***** round = " << round << " ******* " << endl;
@@ -134,8 +134,8 @@ int runBellmanFordOnGPUV3(const char *file, int blocks, int blockSize, int debug
         token = inputFile.substr(0, pos);
         inputFile.erase(0, pos + delimiter.length());
     }
-    storeResult(("../output/" + inputFile + "_SP_cuda_stride_v3.csv").c_str(),V, out_path, out_pred);
-    cout << "Results written to " << ("../output/" + inputFile + "_SP_cuda_stride_v3.csv").c_str() << endl;
+    storeResult(("../output/" + inputFile + "_SP_cuda.csv").c_str(),V, out_path, out_pred);
+    cout << "Results written to " << ("../output/" + inputFile + "_SP_cuda.csv").c_str() << endl;
     cout << "** average time elapsed : " << elapsedTime << " milli seconds** " << endl;
 
     free(out_pred);
