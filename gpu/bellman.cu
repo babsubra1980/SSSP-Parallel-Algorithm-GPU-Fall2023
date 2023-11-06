@@ -56,7 +56,7 @@ int runBellmanFordOnGPUV3(const char *file, int blocks, int blockSize, int debug
     }
 
     int N = I.size();
-    printCudaDevice();
+    printCudaDeviceDetails();
     cout << "Blocks : " << BLOCKS << " Block size : " << BLOCK_SIZE << endl;
 
     int *d_in_V;
