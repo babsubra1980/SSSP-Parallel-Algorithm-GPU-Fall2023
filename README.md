@@ -59,6 +59,7 @@ Time complexity
   </mfenced>
 </math>
 
+
  The Bellman-Ford algorithm
  
 All vertices are processed for  times
