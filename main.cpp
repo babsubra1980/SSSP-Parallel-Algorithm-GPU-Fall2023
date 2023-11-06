@@ -8,7 +8,7 @@ int main(int argc, char **argv) {
                 "BLOCKS - Number of blocks per grid for cuda\n"
                 "BLOCK_SIZE - Number of threads per block for cuda \n"
                 "DEBUG - 1 or 0 to enable/disable extended debug messages on console\n"
-                "Our code expects these CSV files based on FILE thats passed in the argument\n"
+                "Program expects these CSV files based on FILE thats passed in the argument\n"
                 "    FILE_V.csv\n"
                 "    FILE_I.csv\n"
                 "    FILE_E.csv\n"
@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
     std::string file;
     if(argv[2] != NULL){
         file = argv[2];
-        //Check if all CSR files are present
+        //Check if all CSV files are present
         if(!isValidFile(file + "_V.csv") ||
            !isValidFile(file + "_I.csv") ||
            !isValidFile(file + "_E.csv") ||
@@ -37,13 +37,13 @@ int main(int argc, char **argv) {
 
     if(mode == "seq") {
         auto start = high_resolution_clock::now();
-        runBellmanFordSequential(file, debug);
+        bellmanFordSequential(file, debug);
         auto stop = high_resolution_clock::now();
         auto duration = duration_cast<milliseconds>(stop - start);
         cout << "Elapsed time : " << duration.count() << " milli seconds " << endl;
     }
     if(mode == "cuda"){
-        runBellmanFordOnGPUV3(file.c_str(), BLOCKS, BLOCK_SIZE, debug);
+        bellmanFordOnGPU(file.c_str(), BLOCKS, BLOCK_SIZE, debug);
     }
 
 }
