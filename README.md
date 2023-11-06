@@ -84,6 +84,10 @@ Time complexity
 
 # Sequential Bellman-Ford algorithm
 
+
+<img width="299" alt="image" src="https://github.com/babsubra1980/Final-Project---Parallel-Algorithms-Class/assets/37005639/72389229-6855-48ce-857e-fb99e8da060e">
+
+
 Maintain <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
   <mo mathcolor="#3F3F3F">.</mo>
@@ -95,9 +99,9 @@ Maintain <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑉</mi>
 </math>
 
- shortest path weight estimate
+ shortest path weight estimate 
  
- ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
   <mo mathcolor="#3F3F3F">.</mo>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
@@ -107,13 +111,14 @@ Maintain <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
   </math>
 
- ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
   <mo mathcolor="#3F3F3F">.</mo>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
   </math> records the actual shortest path distance in the end.
 
-<img width="299" alt="image" src="https://github.com/babsubra1980/Final-Project---Parallel-Algorithms-Class/assets/37005639/72389229-6855-48ce-857e-fb99e8da060e">
+
 
 Technique of <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑟</mi>
@@ -181,13 +186,15 @@ Technique of <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑤</mi>
   <mfenced mathcolor="#3F3F3F" separators="|">
     <mrow>
+      <mo stretchy="false" mathcolor="#3F3F3F">(</mo>
       <mi mathvariant="italic" mathcolor="#3F3F3F">𝑢</mi>
       <mo mathcolor="#3F3F3F">,</mo>
       <mi mathcolor="#3F3F3F"> </mi>
       <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+      <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
     </mrow>
   </mfenced>
   <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
-  </math>
+</math>
 
 
