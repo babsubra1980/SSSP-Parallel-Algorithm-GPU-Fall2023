@@ -1,5 +1,5 @@
-#ifndef GPU_GRAPH_ALGORITHMS_MAIN_H
-#define GPU_GRAPH_ALGORITHMS_MAIN_H
+#ifndef BELLMANFORD_GPU_MAIN_H
+#define BELLMANFORD_GPU_MAIN_H
 #include <iostream>
 #include <algorithm>
 #include <cassert>
@@ -20,7 +20,7 @@ using namespace std::chrono;
 using std::cout;
 using std::endl;
 
-void runBellmanFordSequential(std::string file, int debug);
-int runBellmanFordOnGPUV3(const char *file, int blocks, int blockSize, int debug);
+void bellmanFordSequential(std::string file, int debug);
+int bellmanFordOnGPU(const char *file, int blocks, int blockSize, int debug);
 
-#endif //GPU_GRAPH_ALGORITHMS_MAIN_H
+#endif //BELLMANFORD_GPU_MAIN_H
