@@ -1,5 +1,5 @@
-#ifndef GPU_GRAPH_ALGORITHMS_BELLMAN_CUH
-#define GPU_GRAPH_ALGORITHMS_BELLMAN_CUH
+#ifndef BELLMANFORD_GPU_CUH
+#define BELLMANFORD_GPU_CUH
 #include "kernels.cuh"
 #include <iostream>
 #include <cuda.h>
@@ -22,4 +22,4 @@ using std::endl;
 
 void printCudaDeviceDetails();
 
-#endif //GPU_GRAPH_ALGORITHMS_BELLMAN_CUH
+#endif //BELLMANFORD_GPU_CUH
