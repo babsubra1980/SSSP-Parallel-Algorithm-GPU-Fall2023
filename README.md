@@ -19,7 +19,7 @@
 	source vertex  to all other vertices.
 	 
 
- Dijkstra’s algorithm
+# Dijkstra’s algorithm
  
 Each vertex is processed one by one
 
@@ -60,7 +60,7 @@ Time complexity
 </math>
 
 
- The Bellman-Ford algorithm
+# The Bellman-Ford algorithm
  
 All vertices are processed for  times
 
