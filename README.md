@@ -95,6 +95,96 @@ Maintain <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑉</mi>
 </math>
 
- shortest path weight estimate
- ￼ records tentative shortest path weight from source vertex ￼ to vertex ￼.
- ￼records the actual shortest path distance in the end.
+ 	shortest path weight estimate
+ 
+ ￼ 	<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+  <mo mathcolor="#3F3F3F">.</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
+</math> records tentative shortest path weight from source vertex ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑠</mi>
+</math> to vertex <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+</math>
+
+ ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+  <mo mathcolor="#3F3F3F">.</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
+</math> records the actual shortest path distance in the end.
+
+<img width="299" alt="image" src="https://github.com/babsubra1980/Final-Project---Parallel-Algorithms-Class/assets/37005639/72389229-6855-48ce-857e-fb99e8da060e">
+
+	Technique of ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑟</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑒</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑙</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑎</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑥</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑎</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑡</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑖</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑜</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑛</mi>
+</math>
+
+ 	used to process edges ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mo stretchy="false" mathcolor="#3F3F3F">(</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑢</mi>
+  <mo mathcolor="#3F3F3F">,</mo>
+  <mi mathcolor="#3F3F3F"> </mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+  <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
+</math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑅</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝐸</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝐿</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝐴</mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑋</mi>
+  <mo stretchy="false" mathcolor="#3F3F3F">(</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑢</mi>
+  <mo mathcolor="#3F3F3F">,</mo>
+  <mi mathcolor="#3F3F3F"> </mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+  <mo mathcolor="#3F3F3F">,</mo>
+  <mi mathcolor="#3F3F3F"> </mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑤</mi>
+  <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
+</math>
+ ￼
+ 	update￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathcolor="#3F3F3F"> </mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+  <mo mathcolor="#3F3F3F">.</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
+</math> with ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi mathvariant="normal" mathcolor="#3F3F3F">m</mi>
+  <mi mathvariant="normal" mathcolor="#3F3F3F">i</mi>
+  <mi mathvariant="normal" mathcolor="#3F3F3F">n</mi>
+  <mo mathcolor="#3F3F3F">⁡</mo>
+  <mo stretchy="false" mathcolor="#3F3F3F">(</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+  <mo mathcolor="#3F3F3F">.</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
+  <mo mathcolor="#3F3F3F">,</mo>
+  <mi mathcolor="#3F3F3F"> </mi>
+  <mi mathcolor="#3F3F3F"> </mi>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑢</mi>
+  <mo mathcolor="#3F3F3F">.</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
+  <mo mathcolor="#3F3F3F">+</mo>
+  <mi mathvariant="italic" mathcolor="#3F3F3F">𝑤</mi>
+  <mfenced mathcolor="#3F3F3F" separators="|">
+    <mrow>
+      <mi mathvariant="italic" mathcolor="#3F3F3F">𝑢</mi>
+      <mo mathcolor="#3F3F3F">,</mo>
+      <mi mathcolor="#3F3F3F"> </mi>
+      <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
+    </mrow>
+  </mfenced>
+  <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
+</math>
+
+
