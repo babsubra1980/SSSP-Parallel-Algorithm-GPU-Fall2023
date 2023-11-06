@@ -2,32 +2,32 @@
 #include "../main.h"
 
 void printCudaDeviceDetails(){
-    int dev = 0;
-    cudaSetDevice(dev);
-    cudaDeviceProp devProps;
-    if (cudaGetDeviceProperties(&devProps, dev) == 0)
+    int device = 0;
+    cudaSetDevice(device);
+    cudaDeviceProp deviceProperties;
+    if (cudaGetDeviceProperties(&deviceProperties, device) == 0)
     {
-        printf("****** Using device %d ***********\n", dev);
+        printf("****** Using device %d ***********\n", device);
         printf("%s; global mem: %dB; compute v%d.%d; clock: %d kHz\n",
-               devProps.name, (int)devProps.totalGlobalMem,
-               (int)devProps.major, (int)devProps.minor,
-               (int)devProps.clockRate);
-        printf("Number of multiprocessors on device : %d\n", devProps.multiProcessorCount);
-        printf("Maximum size of each dimension of a grid : %d\n", *devProps.maxGridSize);
-        printf("Maximum size of each dimension of a block : %d\n", *devProps.maxThreadsDim);
-        printf("Maximum number of threads per block : %d\n", devProps.maxThreadsPerBlock);
-        printf("Maximum number of resident blocks per multiprocessor : %d\n", devProps.maxBlocksPerMultiProcessor );
-        printf("Maximum resident threads per multiprocessor : %d\n", devProps.maxThreadsPerMultiProcessor);
-        printf("Shared memory available per block in bytes : %zu \n", devProps.sharedMemPerBlock );
-        printf("Shared memory available per multiprocessor in bytes : %zu \n", devProps.sharedMemPerMultiprocessor );
-        printf("Warp size in threads : %d \n", devProps.warpSize );
+               deviceProperties.name, (int)deviceProperties.totalGlobalMem,
+               (int)deviceProperties.major, (int)deviceProperties.minor,
+               (int)deviceProperties.clockRate);
+        printf("Number of multiprocessors on device : %d\n", deviceProperties.multiProcessorCount);
+        printf("Maximum size of each dimension of a grid : %d\n", *deviceProperties.maxGridSize);
+        printf("Maximum size of each dimension of a block : %d\n", *deviceProperties.maxThreadsDim);
+        printf("Maximum number of threads per block : %d\n", deviceProperties.maxThreadsPerBlock);
+        printf("Maximum number of resident blocks per multiprocessor : %d\n", deviceProperties.maxBlocksPerMultiProcessor );
+        printf("Maximum resident threads per multiprocessor : %d\n", deviceProperties.maxThreadsPerMultiProcessor);
+        printf("Shared memory available per block in bytes : %zu \n", deviceProperties.sharedMemPerBlock );
+        printf("Shared memory available per multiprocessor in bytes : %zu \n", deviceProperties.sharedMemPerMultiprocessor );
+        printf("Warp size in threads : %d \n", deviceProperties.warpSize );
         printf("****** End of device stats ***********\n");
     }
 }
 
 //Use boolean array of length |V| and do the relaxation only if the distance of an vertex is changed in the previous iteration
 
-int runBellmanFordOnGPUV3(const char *file, int blocks, int blockSize, int debug){
+int bellmanFordOnGPU(const char *file, int blocks, int blockSize, int debug){
 
     std::string inputFile=file;
     int BLOCKS = blocks;
@@ -96,7 +96,7 @@ int runBellmanFordOnGPUV3(const char *file, int blocks, int blockSize, int debug
     //0, V.size()-1 - for binary search of V array with each E[i] to find index
     updateIndexOfEdgesWithGridStide<<<BLOCKS, BLOCK_SIZE>>>(E.size(), d_in_V, d_in_E, 0, V.size()-1);
 
-    // Bellman Ford
+    // Bellman ford
     for (int round = 1; round < V.size(); round++) {
         if(DEBUG){
             cout<< "***** round = " << round << " ******* " << endl;
@@ -108,7 +108,7 @@ int runBellmanFordOnGPUV3(const char *file, int blocks, int blockSize, int debug
 
     cudaEventRecord(stop, 0);
     cudaEventSynchronize(stop);
-    cout << "Completed Bellman Ford on GPU!" << endl;
+    cout << "Completed Bellman Ford on GPU" << endl;
     float elapsedTime;
     cudaEventElapsedTime(&elapsedTime, start, stop);
 
@@ -149,3 +149,5 @@ int runBellmanFordOnGPUV3(const char *file, int blocks, int blockSize, int debug
     cudaFree(d_out_Di);
     return 0;
 }
+
+
