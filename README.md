@@ -95,27 +95,27 @@ Maintain <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑉</mi>
 </math>
 
- 	shortest path weight estimate
+ shortest path weight estimate
  
- ￼ 	<math xmlns="http://www.w3.org/1998/Math/MathML">
+ ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
   <mo mathcolor="#3F3F3F">.</mo>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
-</math> records tentative shortest path weight from source vertex ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  </math> records tentative shortest path weight from source vertex <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑠</mi>
-</math> to vertex <math xmlns="http://www.w3.org/1998/Math/MathML">
+  </math>to vertex<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
-</math>
+  </math>
 
  ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
   <mo mathcolor="#3F3F3F">.</mo>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
-</math> records the actual shortest path distance in the end.
+  </math> records the actual shortest path distance in the end.
 
 <img width="299" alt="image" src="https://github.com/babsubra1980/Final-Project---Parallel-Algorithms-Class/assets/37005639/72389229-6855-48ce-857e-fb99e8da060e">
 
-	Technique of ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+Technique of <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑟</mi>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑒</mi>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑙</mi>
@@ -126,16 +126,17 @@ Maintain <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑖</mi>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑜</mi>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑛</mi>
-</math>
+  </math>
 
- 	used to process edges ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+
+ used to process edges <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mo stretchy="false" mathcolor="#3F3F3F">(</mo>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑢</mi>
   <mo mathcolor="#3F3F3F">,</mo>
   <mi mathcolor="#3F3F3F"> </mi>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
   <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
-</math>
+  </math>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑅</mi>
@@ -152,14 +153,16 @@ Maintain <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathcolor="#3F3F3F"> </mi>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑤</mi>
   <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
-</math>
- ￼
- 	update￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  </math>
+
+
+
+  update <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathcolor="#3F3F3F"> </mi>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑣</mi>
   <mo mathcolor="#3F3F3F">.</mo>
   <mi mathvariant="italic" mathcolor="#3F3F3F">𝑑</mi>
-</math> with ￼<math xmlns="http://www.w3.org/1998/Math/MathML">
+  </math> with <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mi mathvariant="normal" mathcolor="#3F3F3F">m</mi>
   <mi mathvariant="normal" mathcolor="#3F3F3F">i</mi>
   <mi mathvariant="normal" mathcolor="#3F3F3F">n</mi>
@@ -185,6 +188,6 @@ Maintain <math xmlns="http://www.w3.org/1998/Math/MathML">
     </mrow>
   </mfenced>
   <mo stretchy="false" mathcolor="#3F3F3F">)</mo>
-</math>
+  </math>
 
 
