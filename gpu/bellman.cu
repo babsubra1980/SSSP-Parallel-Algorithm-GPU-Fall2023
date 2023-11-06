@@ -13,8 +13,8 @@ void printCudaDevice(){
                (int)devProps.major, (int)devProps.minor,
                (int)devProps.clockRate);
         printf("Number of multiprocessors on device : %d\n", devProps.multiProcessorCount);
-        printf("Maximum size of each dimension of a grid : %d\n", devProps.maxGridSize);
-        printf("Maximum size of each dimension of a block : %d\n", devProps.maxThreadsDim);
+        printf("Maximum size of each dimension of a grid : %d\n", *devProps.maxGridSize);
+        printf("Maximum size of each dimension of a block : %d\n", *devProps.maxThreadsDim);
         printf("Maximum number of threads per block : %d\n", devProps.maxThreadsPerBlock);
         printf("Maximum number of resident blocks per multiprocessor : %d\n", devProps.maxBlocksPerMultiProcessor );
         printf("Maximum resident threads per multiprocessor : %d\n", devProps.maxThreadsPerMultiProcessor);
